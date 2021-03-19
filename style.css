@@ -23,11 +23,17 @@
     width: 300px;
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s;
 }
 
 .showoff {
     transform: translate(-50%, 50%);
     opacity: 0;
+}
+
+.showon {
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 .form-item-area input {
@@ -36,4 +42,23 @@
     outline: none;
     width: 100%;
     padding: 0px 0px 0px 8px;
+}
+
+.shakeinputeror {
+    animation: shakerr 0.5s alternate ease;
+}
+
+@keyframes shakerr {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
 }
